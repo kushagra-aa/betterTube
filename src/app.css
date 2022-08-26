@@ -10,6 +10,7 @@
   padding: 0;
   box-sizing:border-box;
   font-family: 'Roboto', sans-serif;
+  user-select: none;
 }
 
 nav{
@@ -18,8 +19,7 @@ nav{
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap:3em;
-  padding:2em;
+  gap:1em;
   background:rgb(var(--secondary));
   color: rgb(var(--primary));
   text-transform: uppercase;
@@ -27,19 +27,46 @@ nav{
   width: 100vw;
   height: 15.5vh;
 }
+nav > .nav-item{
+  padding: 0 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  height: 100%;
+  transition: all .5s ease-in-out;
+}
+nav > .nav-item:hover{
+background: rgba(var(--primary),0.1);
+}
+nav > .search:hover{
+  outline: none;
+  background: transparent;
+}
+nav > .nav-item> input:focus{
+  outline: none;
+}
+
 .logo{
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 2em;
+  font-size: 3em;
   margin-right: auto;
   gap: 0;
+}
+.logo:hover{
+  background: transparent !important;
 }
 .logo span{
   color: rgb(var(--accent));
   font-size: 1.5em;
   font-weight: 900;
+  transition: font-size .5s ease-in-out;
+}
+.logo:hover span{
+  font-size: 1.7em;
 }
 .search > input{
   border: none;
@@ -85,14 +112,18 @@ main{
   background: rgba(var(--primary),0.1);
 }
 
-.container{
+.container>div{
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+  gap: 1em;
   width: 82vw;
   min-height: 84.5vh;
-  padding: 1em;
+  padding: 5em;
   margin-left: 18vw;
   background: rgb(var(--primary));
 }
-.container h1{
+.container>div>.title>h2{
   font-size: 4rem;
   font-weight: 500 !important;
   color:rgb(var(--secondary)) ;
@@ -100,22 +131,67 @@ main{
   align-items: flex-end;
   gap:0;
 }
-.container h1 > span{
-  font-size: 1.2em;
+.container>div>.title>h1{
+  font-size: 8rem;
   font-weight: 500 !important;
   color:rgb(var(--accent)) ;
 }
-.container h1 >span>span{
+.container>div>.title>h1>div{
+  display: inline-flex;
   font-size: 1.1em;
   font-weight: 500 !important;
   color:rgb(var(--secondary)) ;
+  transform: rotate(6deg);
+  transition: transform .5s ease-in-out;
+}
+.container>div>.title:hover>h1>div{
+  transform: rotate(-6deg);
 }
 .hero-icon{
   width: 12%;
   position: absolute;
-  bottom:10% ;
-  right: 2%;
-  animation: float 3s infinite cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  bottom:20% ;
+  right: 4%;
+  animation: float 3s infinite cubic-bezier(0.39, 0.575, 0.565, 1) ;
+}
+.hero-icon>{
+  pointer-events: none;
+}
+
+.hero-buttons-container{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1%;
+}
+
+.hero-buttons-container>button{
+  padding: 1% 5%;
+  font-size: 2em;
+  text-transform: capitalize;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 2px;
+  background: rgb(var(--secondary));
+  color: rgb(var(--primary));
+  font-weight: 600;
+  transition: all .5s ease-in-out;
+  cursor: pointer;
+}
+.hero-buttons-container>button:nth-child(2){
+  border: 2px solid rgb(var(--accent));
+  background: transparent;
+  color: rgb(var(--secondary));
+}
+.hero-buttons-container>button:nth-child(1):hover{
+  background: rgb(var(--accent));
+  color: rgb(var(--primary));
+}
+.hero-buttons-container>button:nth-child(2):hover{
+  border: 2px solid rgb(var(--accent));
+  background: rgb(var(--accent));
+  color: rgb(var(--primary));
 }
 
 @keyframes float{

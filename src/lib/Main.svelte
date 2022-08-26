@@ -3,6 +3,13 @@ import HeroIcon from './../assets/home-bg.png';
 </script>
 
 <div class=''>
-    <h1>Welcome To <span>Better<span>T</span>ube</span></h1>
+    <div class="title">
+        <h2>Welcome To</h2>
+        <h1>Better<div>T</div>ube</h1>
+    </div>
     <img src={HeroIcon} alt="" class="hero-icon">
+    <div class="hero-buttons-container">
+        <button>start watching</button>
+        <button>explore more</button>
+    </div>
 </div>
