@@ -20,8 +20,8 @@ nav{
   justify-content: flex-end;
   gap:3em;
   padding:2em;
-  background:rgb(var(--primary));
-  color: rgb(var(--secondary));
+  background:rgb(var(--secondary));
+  color: rgb(var(--primary));
   text-transform: uppercase;
   font-weight: 600;
   width: 100vw;
@@ -55,8 +55,8 @@ main{
   position: fixed;
   padding: 1% 0;
   left: 0;
-  background: rgb(var(--primary));
-  color: rgb(var(--secondary));
+  background: rgb(var(--secondary));
+  color: rgb(var(--primary));
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -82,7 +82,7 @@ main{
   justify-content: center;
 }
 .sidebar-item:hover{
-  background: rgba(var(--secondary),0.1);
+  background: rgba(var(--primary),0.1);
 }
 
 .container{
@@ -90,12 +90,16 @@ main{
   min-height: 84.5vh;
   padding: 1em;
   margin-left: 18vw;
-  background: rgba(var(--secondary),1);
+  background: rgb(var(--primary));
+  background-image: url('./assets/home-bg.png');
+  background-repeat: no-repeat;
+  background-position: 120% 100%;
+  background-size: 50%;
 }
 .container h1{
   font-size: 4rem;
   font-weight: 500 !important;
-  color:rgb(var(--primary)) ;
+  color:rgb(var(--secondary)) ;
   display: flex;
   align-items: flex-end;
   gap:0;
@@ -108,5 +112,5 @@ main{
 .container h1 >span>span{
   font-size: 1.1em;
   font-weight: 500 !important;
-  color:rgb(var(--primary)) ;
+  color:rgb(var(--secondary)) ;
 }
