@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+:root{
+  --primary:3, 15, 36;
+  --secondary:230, 243, 255;
+  --accent:245, 135, 10;
+}
+ 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+nav{
+  position: fixed;
+  top:0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap:3em;
+  padding:2em;
+  background:rgb(var(--primary));
+  color: rgb(var(--secondary));
+  text-transform: uppercase;
+  font-weight: 600;
+  width: 100vw;
+  height: 15.5vh;
+}
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 2em;
+  margin-right: auto;
+  gap: 0;
+}
+.logo span{
+  color: rgb(var(--accent));
+  font-size: 1.5em;
+  font-weight: 900;
+}
+.search > input{
+  border: none;
+  padding: .5em;
+  border-radius: 7px;
+}
+main{
+  margin-top: 15.5vh;
+}
+.sidebar{
+  height: 84.5vh;
+  width: 18vw;
+  position: fixed;
+  padding: 1% 0;
+  left: 0;
+  background: rgb(var(--primary));
+  color: rgb(var(--secondary));
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0;
+}
+.sidebar-item{
+  padding: 5% 0 5% 7%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  text-transform: capitalize;
+  font-size: 1.3em;
+  font-weight: 400;
+  text-align: left;
+  transition: background 0.5s ease-in-out;
+  cursor: pointer;
+}
+.sidebar-item:hover{
+  background: rgba(var(--secondary),0.1);
+}
+
+.container{
+  width: 82vw;
+  min-height: 84.5vh;
+  padding: 1em;
+  margin-left: 18vw;
+  background: rgba(var(--secondary),1);
+}
+.container h1{
+  font-size: 4rem;
+  font-weight: 500 !important;
+  color:rgb(var(--primary)) ;
+  display: flex;
+  align-items: flex-end;
+  gap:0;
+}
+.container h1 > span{
+  font-size: 1.2em;
+  font-weight: 500 !important;
+  color:rgb(var(--accent)) ;
+}
+.container h1 >span>span{
+  font-size: 1.1em;
+  font-weight: 500 !important;
+  color:rgb(var(--primary)) ;
+}
