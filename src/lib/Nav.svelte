@@ -1,8 +1,14 @@
 <script>
-
+export let isSidebarCollapsed=false
+const collapseSidebar=()=>{
+    isSidebarCollapsed=!isSidebarCollapsed;
+}
 </script>
 
 <nav>
+    <div class="nav-item nav-ham" on:click={collapseSidebar}>
+        <i class="mi mi-menu"></i>
+    </div>
     <div class="nav-item logo">Better
         <span>T</span>
         ube</div>

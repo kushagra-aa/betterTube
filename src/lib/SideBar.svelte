@@ -1,34 +1,34 @@
 <script>
-
+export let isSidebarCollapsed=false;
 </script>
 
-<div class='sidebar'>
+<div class={`sidebar ${isSidebarCollapsed&&'collapsed-sidebar'}`}>
     <div class="sidebar-item">
         <i class="mi mi-play"></i>
-        Videos
+        <p>Videos</p>
     </div>
     <div class="sidebar-item">
         <i class="mi mi-map"></i>
-        Explore
+        <p>Explore</p>
     </div>
     <div class="sidebar-item">
         <i class="mi mi-archive"></i>
-        Library
+        <p>Library</p>
     </div>
     <div class="sidebar-item">
         <i class="mi mi-clock"></i>
-        History
+        <p>History</p>
     </div>
     <div class="sidebar-item">
         <i class="mi mi-heart"></i>
-        Likes
+        <p>Likes</p>
     </div>
     <div class="sidebar-item">
         <i class="mi mi-add"></i>
-        Watch
-         Later</div>
+        <p>WatchLater</p>
+    </div>
     <div class="sidebar-item">
         <i class="mi mi-settings"></i>
-        Settings
+        <p>Settings</p>
     </div>
 </div>

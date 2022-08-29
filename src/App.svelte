@@ -6,12 +6,13 @@
     import Main from './lib/Main.svelte';
     import Nav from './lib/Nav.svelte'
     import SideBar from './lib/SideBar.svelte'
+    let isSidebarCollapsed=false;
 </script>
 
-<Nav/>
+<Nav bind:isSidebarCollapsed/>
 <main>
-  <SideBar/>
-  <div class="container">
+  <SideBar bind:isSidebarCollapsed/>
+  <div class={`container ${isSidebarCollapsed&&'collapsed-sidebar'}`}>
     <Main/>
   </div>
 </main>

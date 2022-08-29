@@ -1,53 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
-:root{
-  --primary:3, 15, 36;
-  --secondary:230, 243, 255;
-  --accent:245, 135, 10;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+:root {
+  --primary: 3, 15, 36;
+  --secondary: 230, 243, 255;
+  --accent: 245, 135, 10;
 }
- 
-*{
+
+* {
   margin: 0;
   padding: 0;
-  box-sizing:border-box;
-  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
   user-select: none;
 }
 
-nav{
+nav {
   position: fixed;
-  top:0;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap:1em;
-  background:rgb(var(--secondary));
+  gap: 1em;
+  background: rgb(var(--secondary));
   color: rgb(var(--primary));
   text-transform: uppercase;
   font-weight: 600;
   width: 100vw;
   height: 15.5vh;
 }
-nav > .nav-item{
+nav > .nav-item {
   padding: 0 1em;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   height: 100%;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
-nav > .nav-item:hover{
-background: rgba(var(--primary),0.1);
+nav > .nav-item:hover {
+  background: rgba(var(--primary), 0.1);
 }
-nav > .search:hover{
+nav > .search:hover {
   outline: none;
   background: transparent;
 }
-nav > .nav-item> input:focus{
+nav > .nav-item > input:focus {
   outline: none;
 }
 
-.logo{
+.nav-ham {
+  font-size: 2em;
+  width: 5vw;
+}
+
+.logo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,27 +61,27 @@ nav > .nav-item> input:focus{
   margin-right: auto;
   gap: 0;
 }
-.logo:hover{
+.logo:hover {
   background: transparent !important;
 }
-.logo span{
+.logo span {
   color: rgb(var(--accent));
   font-size: 1.5em;
   font-weight: 900;
-  transition: font-size .5s ease-in-out;
+  transition: font-size 0.5s ease-in-out;
 }
-.logo:hover span{
+.logo:hover span {
   font-size: 1.7em;
 }
-.search > input{
+.search > input {
   border: none;
-  padding: .5em;
+  padding: 0.5em;
   border-radius: 7px;
 }
-main{
+main {
   margin-top: 15.5vh;
 }
-.sidebar{
+.sidebar {
   height: 84.5vh;
   width: 18vw;
   position: fixed;
@@ -89,8 +94,9 @@ main{
   align-items: flex-start;
   justify-content: flex-start;
   gap: 0;
+  transition: width 0.5s ease-in-out;
 }
-.sidebar-item{
+.sidebar-item {
   padding: 5% 0 5% 7%;
   width: 100%;
   display: flex;
@@ -103,18 +109,18 @@ main{
   transition: background 0.5s ease-in-out;
   cursor: pointer;
 }
-.sidebar-item> i{
+.sidebar-item > i {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.sidebar-item:hover{
-  background: rgba(var(--primary),0.1);
+.sidebar-item:hover {
+  background: rgba(var(--primary), 0.1);
 }
 
-.container>div{
+.container > div {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   flex-direction: column;
   gap: 1em;
   width: 82vw;
@@ -122,50 +128,51 @@ main{
   padding: 5em;
   margin-left: 18vw;
   background: rgb(var(--primary));
+  transition: all 0.5s ease-in-out;
 }
-.container>div>.title>h2{
+.container > div > .title > h2 {
   font-size: 4rem;
   font-weight: 500 !important;
-  color:rgb(var(--secondary)) ;
+  color: rgb(var(--secondary));
   display: flex;
   align-items: flex-end;
-  gap:0;
+  gap: 0;
 }
-.container>div>.title>h1{
+.container > div > .title > h1 {
   font-size: 8rem;
   font-weight: 500 !important;
-  color:rgb(var(--accent)) ;
+  color: rgb(var(--accent));
 }
-.container>div>.title>h1>div{
+.container > div > .title > h1 > div {
   display: inline-flex;
   font-size: 1.1em;
   font-weight: 500 !important;
-  color:rgb(var(--secondary)) ;
+  color: rgb(var(--secondary));
   transform: rotate(6deg);
-  transition: transform .5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
-.container>div>.title:hover>h1>div{
+.container > div > .title:hover > h1 > div {
   transform: rotate(-6deg);
 }
-.hero-icon{
+.hero-icon {
   width: 12%;
   position: absolute;
-  bottom:20% ;
+  bottom: 20%;
   right: 4%;
-  animation: float 3s infinite cubic-bezier(0.39, 0.575, 0.565, 1) ;
+  animation: float 3s infinite cubic-bezier(0.39, 0.575, 0.565, 1);
 }
-.hero-icon>{
+.hero-icon > {
   pointer-events: none;
 }
 
-.hero-buttons-container{
+.hero-buttons-container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 1%;
 }
 
-.hero-buttons-container>button{
+.hero-buttons-container > button {
   padding: 1% 5%;
   font-size: 2em;
   text-transform: capitalize;
@@ -176,32 +183,54 @@ main{
   background: rgb(var(--secondary));
   color: rgb(var(--primary));
   font-weight: 600;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
-.hero-buttons-container>button:nth-child(2){
+.hero-buttons-container > button:nth-child(2) {
   border: 2px solid rgb(var(--accent));
   background: transparent;
   color: rgb(var(--secondary));
 }
-.hero-buttons-container>button:nth-child(1):hover{
+.hero-buttons-container > button:nth-child(1):hover {
   background: rgb(var(--accent));
   color: rgb(var(--primary));
 }
-.hero-buttons-container>button:nth-child(2):hover{
+.hero-buttons-container > button:nth-child(2):hover {
   border: 2px solid rgb(var(--accent));
   background: rgb(var(--accent));
   color: rgb(var(--primary));
 }
 
-@keyframes float{
-  0%{
+.sidebar.collapsed-sidebar {
+  width: 5vw;
+  gap: 0.7em;
+}
+.sidebar.collapsed-sidebar .sidebar-item {
+  align-items: center;
+  justify-content: center;
+}
+.sidebar.collapsed-sidebar .sidebar-item p {
+  display: none;
+}
+.sidebar.collapsed-sidebar .sidebar-item > i {
+  transition: all 0.5s ease-in-out;
+  font-size: 1.3em;
+}
+
+.container.collapsed-sidebar > div {
+  width: 95vw;
+  margin-left: 5vw;
+}
+
+/* Animation frames */
+@keyframes float {
+  0% {
     transform: translateY(5%);
   }
-  50%{
+  50% {
     transform: translateY(-10%);
   }
-  100%{
+  100% {
     transform: translateY(5%);
   }
 }
