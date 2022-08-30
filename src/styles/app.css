@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+@import './hero.css';
+@import './nav.css';
+@import './sidebar.css';
+:root {
+  --primary: 3, 15, 36;
+  --secondary: 230, 243, 255;
+  --accent: 245, 135, 10;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  user-select: none;
+}
+
+main {
+  margin-top: 15.5vh;
+}
+main.hidden-navbar {
+  margin-top: 0;
+  min-height: 100vh;
+}
+
+/* Animation frames */
+@keyframes float {
+  0% {
+    transform: translateY(5%);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(5%);
+  }
+}

@@ -1,11 +1,12 @@
 <script>
 export let isSidebarCollapsed=false
+export let isNavbarHidden=false
 const collapseSidebar=()=>{
     isSidebarCollapsed=!isSidebarCollapsed;
 }
 </script>
 
-<nav>
+<nav class={`${isNavbarHidden&&'hidden-navbar'}`}>
     <div class="nav-item nav-ham" on:click={collapseSidebar}>
         <i class="mi mi-menu"></i>
     </div>

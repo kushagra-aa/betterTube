@@ -1,8 +1,9 @@
 <script>
 export let isSidebarCollapsed=false;
+export let isNavbarHidden=false;
 </script>
 
-<div class={`sidebar ${isSidebarCollapsed&&'collapsed-sidebar'}`}>
+<div class={`sidebar ${isSidebarCollapsed&&'collapsed-sidebar'} ${isNavbarHidden&&'hidden-navbar'}`}>
     <div class="sidebar-item">
         <i class="mi mi-play"></i>
         <p>Videos</p>
