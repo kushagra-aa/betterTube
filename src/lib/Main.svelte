@@ -3,7 +3,7 @@ import HeroIcon from './../assets/home-bg.png';
 import About from './About.svelte';
 </script>
 
-<div class='hero-container'>
+<section class='hero-container'>
     <div class="title">
         <h2>Welcome To</h2>
         <h1>Better<div>T</div>ube</h1>
@@ -13,5 +13,5 @@ import About from './About.svelte';
         <button>start watching</button>
         <button>explore more</button>
     </div>
-</div>
+</section>
 <About/>

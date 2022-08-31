@@ -1,5 +1,5 @@
 <script></script>
-<div class="about-container">
+<section class="about-container">
     <h2>Nobody does it better</h2>
     <p>We are the best video straming service you can ever findout in the wild.
         <span>
@@ -9,4 +9,4 @@
         </span>
     </p>
     <img src="./src/assets/award.png" alt="">
-</div>
+</section>

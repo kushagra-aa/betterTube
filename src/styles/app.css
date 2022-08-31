@@ -30,12 +30,12 @@ main.hidden-navbar {
   min-height: 100vh;
 }
 
-.container > div {
+.container > section {
   width: 82vw;
   margin-left: 18vw;
 }
 
-.container.collapsed-sidebar > div {
+.container.collapsed-sidebar > section {
   margin-left: 5vw;
   width: 95vw !important;
 }
