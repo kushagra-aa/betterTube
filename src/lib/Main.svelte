@@ -1,8 +1,9 @@
 <script>
 import HeroIcon from './../assets/home-bg.png';
+import About from './About.svelte';
 </script>
 
-<div class=''>
+<div class='hero-container'>
     <div class="title">
         <h2>Welcome To</h2>
         <h1>Better<div>T</div>ube</h1>
@@ -13,3 +14,4 @@ import HeroIcon from './../assets/home-bg.png';
         <button>explore more</button>
     </div>
 </div>
+<About/>

@@ -1,0 +1,63 @@
+.about-container {
+  padding: 5rem;
+  background: rgba(var(--accent), 1);
+  color: rgba(var(--secondary), 1);
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  position: relative;
+}
+.about-container > h2 {
+  font-size: 3.4em;
+  letter-spacing: 0.1em;
+  text-transform: capitalize;
+  position: relative;
+  width: max-content;
+  overflow: hidden;
+}
+.about-container > h2::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 65%;
+  height: 100%;
+  border-bottom: 2px solid rgba(var(--primary), 1);
+  transition: all 0.5s ease-in-out;
+}
+.about-container > h2:hover::after {
+  margin-right: 67%;
+}
+.about-container > p {
+  font-size: 2em;
+  width: 60%;
+  line-height: 110%;
+  color: rgba(var(--primary), 1);
+  position: relative;
+}
+.about-container>p>span{
+    font-size: 1.5em;
+    color: rgba(var(--secondary),1);
+    position: absolute;
+    width: max-content;
+    bottom: -5%;
+    right: -5%;
+}
+.about-container>p>span>i{
+    transition: all 1s ease-in-out;
+    font-style: normal;
+}
+.about-container>p>span>i:hover{
+    text-shadow: 0 0 20px #c8ff00, 0 0 5px #ffee00;
+    color:#ffee00;
+}
+.about-container > img {
+  padding: 0.4em;
+  width: 15%;
+  background: rgba(var(--secondary), .8);
+  border-radius: 5px;
+  position: absolute;
+  bottom: 10%;
+  right: 6%;
+  /* animation: float 3s infinite ease-in-out; */
+}

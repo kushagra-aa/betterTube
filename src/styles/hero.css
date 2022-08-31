@@ -1,88 +1,80 @@
+.container > .hero-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+  min-height: 84.5vh;
+  padding: 5em;
+  background: rgb(var(--primary));
+  transition: all 0.5s ease-in-out;
+}
+.container > .hero-container > .title > h2 {
+  font-size: 4rem;
+  font-weight: 500 !important;
+  color: rgb(var(--secondary));
+  display: flex;
+  align-items: flex-end;
+  gap: 0;
+}
+.container > .hero-container > .title > h1 {
+  font-size: 8rem;
+  font-weight: 500 !important;
+  color: rgb(var(--accent));
+}
+.container > .hero-container > .title > h1 > div {
+  display: inline-flex;
+  font-size: 1.1em;
+  font-weight: 500 !important;
+  color: rgb(var(--secondary));
+  transform: rotate(6deg);
+  transition: transform 0.5s ease-in-out;
+}
+.container > .hero-container > .title:hover > h1 > div {
+  transform: rotate(-6deg);
+}
+.hero-icon {
+  width: 12%;
+  position: absolute;
+  bottom: 25%;
+  right: 4%;
+  animation: bounce 2s infinite cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.hero-icon:hover {
+  animation: none;
+}
 
-.container > div {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 1em;
-    width: 82vw;
-    min-height: 84.5vh;
-    padding: 5em;
-    margin-left: 18vw;
-    background: rgb(var(--primary));
-    transition: all 0.5s ease-in-out;
-  }
-  .container > div > .title > h2 {
-    font-size: 4rem;
-    font-weight: 500 !important;
-    color: rgb(var(--secondary));
-    display: flex;
-    align-items: flex-end;
-    gap: 0;
-  }
-  .container > div > .title > h1 {
-    font-size: 8rem;
-    font-weight: 500 !important;
-    color: rgb(var(--accent));
-  }
-  .container > div > .title > h1 > div {
-    display: inline-flex;
-    font-size: 1.1em;
-    font-weight: 500 !important;
-    color: rgb(var(--secondary));
-    transform: rotate(6deg);
-    transition: transform 0.5s ease-in-out;
-  }
-  .container > div > .title:hover > h1 > div {
-    transform: rotate(-6deg);
-  }
-  .hero-icon {
-    width: 12%;
-    position: absolute;
-    bottom: 20%;
-    right: 4%;
-    animation: float 3s infinite cubic-bezier(0.39, 0.575, 0.565, 1);
-  }
-  .hero-icon > {
-    pointer-events: none;
-  }
-  
-  .hero-buttons-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1%;
-  }
-  
-  .hero-buttons-container > button {
-    padding: 1% 5%;
-    font-size: 2em;
-    text-transform: capitalize;
-    outline: none;
-    box-shadow: none;
-    border: none;
-    border-radius: 2px;
-    background: rgb(var(--secondary));
-    color: rgb(var(--primary));
-    font-weight: 600;
-    transition: all 0.5s ease-in-out;
-    cursor: pointer;
-  }
-  .hero-buttons-container > button:nth-child(2) {
-    border: 2px solid rgb(var(--accent));
-    background: transparent;
-    color: rgb(var(--secondary));
-  }
-  .hero-buttons-container > button:nth-child(1):hover {
-    background: rgb(var(--accent));
-    color: rgb(var(--primary));
-  }
-  .hero-buttons-container > button:nth-child(2):hover {
-    border: 2px solid rgb(var(--accent));
-    background: rgb(var(--accent));
-    color: rgb(var(--primary));
-  }
-  
-.container.collapsed-sidebar > div {
-    margin-left: 5vw;
-    width: 95vw !important;
-  }
+.hero-buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1%;
+}
+
+.hero-buttons-container > button {
+  padding: 1% 5%;
+  font-size: 2em;
+  text-transform: capitalize;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 2px;
+  background: rgb(var(--secondary));
+  color: rgb(var(--primary));
+  font-weight: 600;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.hero-buttons-container > button:nth-child(2) {
+  border: 2px solid rgb(var(--accent));
+  background: transparent;
+  color: rgb(var(--secondary));
+}
+.hero-buttons-container > button:nth-child(1):hover {
+  background: rgb(var(--accent));
+  color: rgb(var(--primary));
+}
+.hero-buttons-container > button:nth-child(2):hover {
+  border: 2px solid rgb(var(--accent));
+  background: rgb(var(--accent));
+  color: rgb(var(--primary));
+}
