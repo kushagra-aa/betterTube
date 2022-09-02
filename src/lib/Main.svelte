@@ -1,6 +1,7 @@
 <script>
 import HeroIcon from './../assets/home-bg.png';
 import About from './About.svelte';
+import Features from './Features.svelte';
 </script>
 
 <section class='hero-container'>
@@ -15,3 +16,4 @@ import About from './About.svelte';
     </div>
 </section>
 <About/>
+<Features/>
