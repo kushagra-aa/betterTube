@@ -10,23 +10,30 @@
   let lastScroll;
   onMount(() => {
     lastScroll = scrollY;
-    console.log('lastScroll :>> ', lastScroll);
+    console.log("--------<Function:OnMount>--------");
+    console.log("lastScroll :>> ", lastScroll);
+    console.log("--------<Function:OnMount>--------");
   });
   $: if (scrollY > lastScroll) {
     lastScroll = scrollY;
-    console.log("Last In scroll>last========", lastScroll);
-    console.log("Scroll In scroll>last========", lastScroll);
+    console.log("--------<Function:setLastScroll>--------");
+    console.log("Last::>", lastScroll);
+    console.log("Scroll::>", lastScroll);
+    console.log("--------<Function:setLastScroll>--------");
   }
   $: if (scrollY > minScroll) {
     isNavbarHidden = true;
-    console.log("Last In scroll>min========", lastScroll);
-    console.log("Scroll In scroll>min========", scrollY);
+    console.log("--------<Function:hidescroll>--------");
+    console.log("Last::>", lastScroll);
+    console.log("Scroll::>", scrollY);
+    console.log("--------<Function:hidescroll>--------");
   }
   $: if (scrollY < lastScroll) {
     isNavbarHidden = false;
-    lastScroll = scrollY;
-    console.log("Last In scroll<lastScroll========", lastScroll);
-    console.log("Scroll In scroll<lastScroll========", scrollY);
+    console.log("--------<Function:showscroll>--------");
+    console.log("Last::>", lastScroll);
+    console.log("Scroll::>", scrollY);
+    console.log("--------<Function:showscroll>--------");
   }
 </script>
 
