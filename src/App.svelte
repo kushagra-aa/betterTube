@@ -6,35 +6,30 @@ import Footer from "./lib/Footer.svelte";
   import SideBar from "./lib/SideBar.svelte";
   let isSidebarCollapsed = false;
   let isNavbarHidden = false;
-  let minScroll = 80;
-  let scrollY;
+  let minScroll = 10;
+  let scrollY=0;
   let lastScroll;
   onMount(() => {
     lastScroll = scrollY;
     console.log("--------<Function:OnMount>--------");
     console.log("lastScroll :>> ", lastScroll);
-    console.log("--------<Function:OnMount>--------");
+    console.log("--------<Function:OnMount:End>--------");
   });
-  $: if (scrollY > lastScroll) {
-    lastScroll = scrollY;
-    console.log("--------<Function:setLastScroll>--------");
-    console.log("Last::>", lastScroll);
-    console.log("Scroll::>", lastScroll);
-    console.log("--------<Function:setLastScroll>--------");
-  }
-  $: if (scrollY > minScroll) {
+  $: if (scrollY-minScroll>lastScroll) {
     isNavbarHidden = true;
+    lastScroll = scrollY;
     console.log("--------<Function:hidescroll>--------");
-    console.log("Last::>", lastScroll);
-    console.log("Scroll::>", scrollY);
-    console.log("--------<Function:hidescroll>--------");
+    console.log("Last:>>", lastScroll);
+    console.log("Scroll:>>", scrollY);
+    console.log("--------<Function:hidescroll:End>--------");
   }
-  $: if (scrollY < lastScroll) {
+  $: if (scrollY < lastScroll-minScroll) {
     isNavbarHidden = false;
+    lastScroll = scrollY;
     console.log("--------<Function:showscroll>--------");
-    console.log("Last::>", lastScroll);
-    console.log("Scroll::>", scrollY);
-    console.log("--------<Function:showscroll>--------");
+    console.log("Last:>>", lastScroll);
+    console.log("Scroll:>>", scrollY);
+    console.log("--------<Function:showscroll:End>--------");
   }
 </script>
 
