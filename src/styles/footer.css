@@ -26,4 +26,12 @@ footer > button {
   border: none;
   outline: none;
   border-radius: 5px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
+
+footer > button:hover {
+  filter: brightness(110%);
+  box-shadow: 0 0 30px 0 #ffbb006e;
+  color:rgba(var(--secondary), 1);
 }
