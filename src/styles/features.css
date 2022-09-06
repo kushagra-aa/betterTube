@@ -1,5 +1,5 @@
 .features-container {
-  padding: 2em 4em;
+  padding: 2em 4em 8em 4em;
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -40,7 +40,7 @@
 }
 .feature-container > p {
   text-align: center;
-  font-size: 1.1rem;
+  font-size: .9rem;
   font-weight: 300;
   line-height: 140%;
   width: 80%;

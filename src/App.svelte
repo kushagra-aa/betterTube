@@ -6,7 +6,7 @@
   let isSidebarCollapsed = false;
   let isNavbarHidden = false;
   let minScroll = 80;
-  let scrollY = 0;
+  let scrollY;
   let lastScroll;
   onMount(() => {
     lastScroll = scrollY;
