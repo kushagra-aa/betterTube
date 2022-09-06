@@ -1,5 +1,6 @@
 <script>
   import { onMount } from "svelte";
+import Footer from "./lib/Footer.svelte";
   import Main from "./lib/Main.svelte";
   import Nav from "./lib/Nav.svelte";
   import SideBar from "./lib/SideBar.svelte";
@@ -55,3 +56,4 @@
     <Main />
   </div>
 </main>
+<Footer bind:isSidebarCollapsed={isSidebarCollapsed}/>

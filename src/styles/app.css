@@ -4,6 +4,7 @@
 @import "./features.css";
 @import "./nav.css";
 @import "./sidebar.css";
+@import "./footer.css";
 :root {
   --primary: 3, 15, 36;
   --secondary: 230, 243, 255;
