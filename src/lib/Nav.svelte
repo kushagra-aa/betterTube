@@ -8,7 +8,7 @@ const collapseSidebar=()=>{
 
 <nav class={`${isNavbarHidden&&'hidden-navbar'}`}>
     <div class="nav-item nav-ham" on:click={collapseSidebar}>
-        <i class="mi mi-menu"></i>
+        <i class={`mi ${!isSidebarCollapsed?'mi-close':'mi-menu'}`}></i>
     </div>
     <div class="nav-item logo">Better
         <span>T</span>

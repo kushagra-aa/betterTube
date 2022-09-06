@@ -32,4 +32,16 @@ export let isNavbarHidden=false;
         <i class="mi mi-settings"></i>
         <p>Settings</p>
     </div>
+    <div class="sidebar-item">
+        <i class="mi mi-delete"></i>
+        <p>deleted</p>
+    </div>
+    <div class="sidebar-item">
+        <i class="mi mi-camera"></i>
+        <p>create</p>
+    </div>
+    <div class="sidebar-item">
+        <i class="mi mi-chevron-down"></i>
+        <p>More</p>
+    </div>
 </div>
