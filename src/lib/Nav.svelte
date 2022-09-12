@@ -1,4 +1,7 @@
 <script>
+import { Link } from "svelte-navigator";
+
+
 export let isSidebarCollapsed=false
 export let isNavbarHidden=false
 const collapseSidebar=()=>{
@@ -10,13 +13,13 @@ const collapseSidebar=()=>{
     <div class="nav-item nav-ham" on:click={collapseSidebar}>
         <i class={`mi ${!isSidebarCollapsed?'mi-close':'mi-menu'}`}></i>
     </div>
-    <div class="nav-item logo">Better
+    <Link to='/' class="nav-item logo">Better
         <span>T</span>
-        ube</div>
-    <div class="nav-item">home</div>
-    <div class="nav-item">servies</div>
-    <div class="nav-item">contact</div>
-    <div class="nav-item">about</div>
+        ube</Link>
+    <Link to='/' class="nav-item">home</Link>
+    <Link to='/services' class="nav-item">servies</Link>
+    <Link to='/contact' class="nav-item">contact</Link>
+    <Link to='/about' class="nav-item">about</Link>
     <div class="nav-item search">
         <input type="text" placeholder="Search..."/>
     </div>

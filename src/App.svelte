@@ -1,13 +1,15 @@
 <script>
+  import { Router, Route, Link } from "svelte-navigator";
   import { onMount } from "svelte";
-import Footer from "./lib/Footer.svelte";
+  import Footer from "./lib/Footer.svelte";
   import Main from "./lib/Main.svelte";
   import Nav from "./lib/Nav.svelte";
   import SideBar from "./lib/SideBar.svelte";
+  import NotFound from "./lib/NotFound.svelte";
   let isSidebarCollapsed = false;
   let isNavbarHidden = false;
   let minScroll = 10;
-  let scrollY=0;
+  let scrollY = 0;
   let lastScroll;
   onMount(() => {
     lastScroll = scrollY;
@@ -15,7 +17,7 @@ import Footer from "./lib/Footer.svelte";
     console.log("lastScroll :>> ", lastScroll);
     console.log("--------<Function:OnMount:End>--------");
   });
-  $: if (scrollY-minScroll>lastScroll) {
+  $: if (scrollY - minScroll > lastScroll) {
     isNavbarHidden = true;
     lastScroll = scrollY;
     console.log("--------<Function:hidescroll>--------");
@@ -23,7 +25,7 @@ import Footer from "./lib/Footer.svelte";
     console.log("Scroll:>>", scrollY);
     console.log("--------<Function:hidescroll:End>--------");
   }
-  $: if (scrollY < lastScroll-minScroll) {
+  $: if (scrollY < lastScroll - minScroll) {
     isNavbarHidden = false;
     lastScroll = scrollY;
     console.log("--------<Function:showscroll>--------");
@@ -40,15 +42,25 @@ import Footer from "./lib/Footer.svelte";
   />
 </svelte:head>
 <svelte:window bind:scrollY />
-<Nav bind:isSidebarCollapsed bind:isNavbarHidden />
-<main class={`${isNavbarHidden && "hidden-navbar"}`}>
-  <SideBar bind:isSidebarCollapsed bind:isNavbarHidden />
-  <div
-    class={`container ${isSidebarCollapsed && "collapsed-sidebar"} ${
-      isNavbarHidden && "hidden-navbar"
-    }`}
-  >
-    <Main />
-  </div>
-</main>
-<Footer bind:isSidebarCollapsed={isSidebarCollapsed}/>
+<Router>
+  <Nav bind:isSidebarCollapsed bind:isNavbarHidden />
+  <main class={`${isNavbarHidden && "hidden-navbar"}`}>
+    <SideBar bind:isSidebarCollapsed bind:isNavbarHidden />
+    <div
+      class={`container ${isSidebarCollapsed && "collapsed-sidebar"} ${
+        isNavbarHidden && "hidden-navbar"
+      }`}
+    >
+      <Route path="/">
+        <Main />
+      </Route>
+      <Route path="/home">
+        <Main />
+      </Route>
+      <Route path="">
+        <NotFound />
+      </Route>
+    </div>
+  </main>
+  <Footer bind:isSidebarCollapsed />
+</Router>
