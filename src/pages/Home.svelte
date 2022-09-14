@@ -1,7 +1,7 @@
 <script>
 import HeroIcon from './../assets/home-bg.png';
-import About from './About.svelte';
-import Features from './Features.svelte';
+import About from '../lib/About.svelte';
+import Features from '../lib/Features.svelte';
 </script>
 
 <section class='hero-container'>

@@ -2,10 +2,10 @@
   import { Router, Route, Link } from "svelte-navigator";
   import { onMount } from "svelte";
   import Footer from "./lib/Footer.svelte";
-  import Main from "./lib/Main.svelte";
+  import Home from "./pages/Home.svelte";
   import Nav from "./lib/Nav.svelte";
   import SideBar from "./lib/SideBar.svelte";
-  import NotFound from "./lib/NotFound.svelte";
+  import NotFound from "./pages/NotFound.svelte";
   let isSidebarCollapsed = false;
   let isNavbarHidden = false;
   let minScroll = 10;
@@ -52,10 +52,10 @@
       }`}
     >
       <Route path="/">
-        <Main />
+        <Home />
       </Route>
       <Route path="/home">
-        <Main />
+        <Home />
       </Route>
       <Route path="">
         <NotFound />
